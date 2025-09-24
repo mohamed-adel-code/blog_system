@@ -1,15 +1,82 @@
+/* Main stylesheet for the Blog System (compatible with Bootstrap) */
+
+/* CSS Custom Properties for reusable values */
+:root {
+    --primary-color: #007bff; /* Primary color (e.g., for buttons, links) */
+    --background-color: #f8f9fa; /* Light gray background */
+    --text-color: #333; /* Default text color */
+    --footer-bg: #343a40; /* Dark footer background */
+}
+
+/* Body styling */
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f8f9fa;
+    font-family: Arial, sans-serif; /* Default font with sans-serif fallback */
+    background-color: var(--background-color); /* Light gray background */
+    color: var(--text-color); /* Default text color */
+    margin: 0; /* Remove default margin */
+    min-height: 100vh; /* Ensure body takes full viewport height */
+    display: flex; /* Use flexbox for sticky footer */
+    flex-direction: column; /* Arrange content in a column */
 }
 
+/* Main content wrapper (for sticky footer) */
+main {
+    flex: 1 0 auto; /* Allow main content to grow and fill space */
+}
+
+/* Card image styling (used in Bootstrap cards) */
 .card-img-top {
-    max-height: 200px;
-    object-fit: cover;
+    max-height: 200px; /* Limit image height to 200px */
+    object-fit: cover; /* Ensure image covers the area without distortion */
 }
 
+/* Button styling (Bootstrap override) */
+.btn-primary {
+    background-color: var(--primary-color); /* Primary button color */
+    border-color: var(--primary-color); /* Primary button border */
+}
+
+/* Form styling */
+.form-control {
+    border-radius: 0.25rem; /* Consistent border radius */
+    margin-bottom: 1rem; /* Space between form elements */
+}
+
+/* Footer styling (sticky footer) */
 footer {
-    position: relative;
-    bottom: 0;
-    width: 100%;
+    background-color: var(--footer-bg); /* Dark background for footer */
+    color: #fff; /* White text for contrast */
+    padding: 1rem; /* Add padding */
+    flex-shrink: 0; /* Prevent footer from shrinking */
+    width: 100%; /* Ensure footer spans full width */
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+    .card-img-top {
+        max-height: 150px; /* Reduce image height on smaller screens */
+    }
+}
+
+/* RTL support for Arabic */
+html[dir="rtl"] body {
+    font-family: 'Cairo', Arial, sans-serif; /* Use Cairo font for Arabic if available */
+    text-align: right; /* Align text to the right */
+}
+
+/* Message styling (success, error, etc.) */
+.alert-success {
+    background-color: #d4edda; /* Light green for success messages */
+    color: #155724; /* Dark green text */
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 0.25rem;
+}
+
+.alert-error {
+    background-color: #f8d7da; /* Light red for error messages */
+    color: #721c24; /* Dark red text */
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 0.25rem;
 }

@@ -1,8 +1,37 @@
+# Ignore configuration files with sensitive data
 includes/config.php
 
+# Ignore uploaded files directory
 uploads/
 
+# Ignore log files
 *.log
+
+# Ignore cache files
 *.cache
+
+# Ignore vendor directory for Composer dependencies
 /vendor/
+
+# Ignore macOS-specific system files
 .DS_Store
+
+# Ignore database schema file
+database.sql
+
+# Ignore environment configuration files
+.env
+
+# Ignore temporary directories
+tmp/
+cache/
+
+# Ignore .htaccess if it contains sensitive server configs
+.htaccess
+
+# Ignore IDE files
+.vscode/
+.idea/
+
+# Ignore OS files
+Thumbs.db
