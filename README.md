@@ -71,3 +71,7 @@ Open a pull request.
 
 License
 This project is licensed under the MIT License. See the LICENSE file for details.
+
+## Screenshots
+![Blog Homepage](screenshots/Home.png)
+![Admin Dashboard](screenshots/Dashboard.png)
