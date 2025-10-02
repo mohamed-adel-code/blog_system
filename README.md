@@ -35,9 +35,6 @@ Copy includes/config.sample.php to includes/config.php.
 Edit includes/config.php to add your database credentials and other settings.
 
 
-Set up file permissions:
-Ensure the uploads/ directory (if used) is writable by the web server:chmod -R 755 public/assets/images
-
 
 
 
